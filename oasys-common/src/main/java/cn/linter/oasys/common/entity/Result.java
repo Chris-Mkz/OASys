@@ -6,7 +6,6 @@ import lombok.ToString;
 
 /**
  * 响应实体类
- *
  * @author ChrisMo
  * @since 2022/11/01
  */

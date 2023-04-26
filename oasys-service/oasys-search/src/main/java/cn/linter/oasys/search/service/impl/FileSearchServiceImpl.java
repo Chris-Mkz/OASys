@@ -22,8 +22,6 @@ public class FileSearchServiceImpl implements FileSearchService {
     @Resource
     private FileSearchRepository fileSearchRepository;
 
-
-
     @Override
     public void saveFile(File file) {
         fileSearchRepository.save(file);

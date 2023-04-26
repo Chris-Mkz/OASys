@@ -7,7 +7,6 @@ import org.springframework.web.reactive.function.client.WebClient;
 
 /**
  * WebClient配置类
- *
  * @author ChrisMo
  * @since 2023/1/22
  */

@@ -5,7 +5,6 @@ import org.springframework.http.HttpMethod;
 
 /**
  * 权限实体类
- *
  * @author ChrisMo
  * @since 2023/01/14
  */

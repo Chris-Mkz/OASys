@@ -14,7 +14,6 @@ import java.util.stream.Collectors;
 
 /**
  * 全局异常处理器
- *
  * @author ChrisMo
  * @date 2022/12/19
  */

@@ -11,7 +11,6 @@ import java.security.KeyPair;
 
 /**
  * 授权服务器配置类
- *
  * @author ChrisMO
  * @since 2023/2/4
  */

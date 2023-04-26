@@ -4,7 +4,6 @@ import com.fasterxml.jackson.annotation.JsonFormat;
 
 /**
  * 响应状态枚举类
- *
  * @author ChrisMo
  * @date 2022/12/19
  */

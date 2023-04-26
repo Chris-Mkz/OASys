@@ -13,7 +13,6 @@ import java.util.List;
 
 /**
  * 部门控制器
- *
  * @author ChrisMo
  * @since 2022/11/15
  */
@@ -23,7 +22,6 @@ public class DeptController {
 
     @Autowired
     private DeptService deptService;
-
 
     @GetMapping
     public Result<List<Dept>> listDept() {

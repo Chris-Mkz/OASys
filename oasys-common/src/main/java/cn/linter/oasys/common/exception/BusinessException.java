@@ -7,7 +7,6 @@ import lombok.ToString;
 
 /**
  * 业务异常类
- *
  * @author ChrisMo
  * @date 2022/12/19
  */

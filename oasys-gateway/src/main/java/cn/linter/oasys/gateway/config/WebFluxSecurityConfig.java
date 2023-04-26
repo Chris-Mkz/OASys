@@ -23,15 +23,17 @@ import org.springframework.security.oauth2.server.resource.authentication.JwtAut
 import org.springframework.security.oauth2.server.resource.authentication.JwtGrantedAuthoritiesConverter;
 import org.springframework.security.oauth2.server.resource.authentication.ReactiveJwtAuthenticationConverterAdapter;
 import org.springframework.security.web.server.SecurityWebFilterChain;
+import org.springframework.stereotype.Component;
+import org.springframework.util.PathMatcher;
 import org.springframework.web.server.ServerWebExchange;
 import reactor.core.publisher.Mono;
 
+import javax.annotation.Resource;
 import java.nio.charset.StandardCharsets;
 
 /**
  * Security配置
- *
- * @author Chris
+ * @author ChrisMo
  * @since 2022/11/03
  */
 @Slf4j
@@ -39,10 +41,12 @@ import java.nio.charset.StandardCharsets;
 @EnableWebFluxSecurity
 public class WebFluxSecurityConfig {
 
-    @Autowired
+    @Resource
     private ObjectMapper objectMapper;
-    @Autowired
+
+    @Resource
     private AuthorizationManager authorizationManager;
+
 
     @Bean
     public SecurityWebFilterChain springSecurityFilterChain(ServerHttpSecurity http) {

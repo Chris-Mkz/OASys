@@ -1,9 +1,9 @@
 package cn.linter.oasys.auth.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
+import lombok.Data;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
-
 import java.util.Collection;
 import java.util.List;
 
@@ -12,6 +12,7 @@ import java.util.List;
  * @author ChrisMo
  * @since 2022/11/01
  */
+@Data
 public class User implements UserDetails {
 
     /**
@@ -34,46 +35,6 @@ public class User implements UserDetails {
      * 权限列表
      */
     private List<? extends GrantedAuthority> authorities;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getFullName() {
-        return fullName;
-    }
-
-    public void setFullName(String fullName) {
-        this.fullName = fullName;
-    }
-
-    /**
-     * @return 用户名
-     */
-    @Override
-    public String getUsername() {
-        return this.username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    /**
-     * @return 密码
-     */
-    @Override
-    public String getPassword() {
-        return this.password;
-    }
-
-    public void setPassword(String password) {
-        this.password = password;
-    }
 
     /**
      * @return 权限列表

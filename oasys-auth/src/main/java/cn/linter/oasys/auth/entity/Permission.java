@@ -6,7 +6,6 @@ import java.util.List;
 
 /**
  * 权限实体类
- *
  * @author ChrisMo
  * @since 2023/01/14
  */

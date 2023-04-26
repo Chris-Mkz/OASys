@@ -30,7 +30,6 @@ public class FileController {
     @Resource
     private FileService fileService;
 
-
     @GetMapping
     public Result<Page<File>> listFile(@RequestParam(defaultValue = "1") int pageNumber, @RequestParam(defaultValue = "10") int pageSize, File file) {
         PageInfo<File> pageInfo = fileService.listByEntity(pageNumber, pageSize, file);

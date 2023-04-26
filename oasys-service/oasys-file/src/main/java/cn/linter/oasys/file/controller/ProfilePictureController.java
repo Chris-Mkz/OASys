@@ -24,7 +24,6 @@ public class ProfilePictureController {
     @Resource
     private ProfilePictureService profilePictureService;
 
-
     @PostMapping
     public Result<String> uploadFile(@RequestParam MultipartFile multipartFile) throws Exception {
         return Result.of(ResultStatus.SUCCESS, profilePictureService.createProfilePicture(multipartFile));

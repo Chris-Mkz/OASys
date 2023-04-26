@@ -21,18 +21,35 @@ public class AttendanceController {
     @Resource
     private AttendanceService attendanceService;
 
-
+    /**
+     * 出勤信息查询
+     * @param userId
+     * @param year
+     * @param month
+     * @param day
+     * @return
+     */
     @GetMapping
     public Result<List<Attendance>> listAttendance(@RequestParam Long userId, @RequestParam Integer year,
                                                    @RequestParam Integer month, Integer day) {
         return Result.of(ResultStatus.SUCCESS, attendanceService.listByUserIdAndClockDate(userId, year, month, day));
     }
 
+    /**
+     * 签到
+     * @param userId
+     * @return
+     */
     @PostMapping
     public Result<Attendance> clockIn(@RequestParam Long userId) {
         return Result.of(ResultStatus.SUCCESS, attendanceService.create(userId));
     }
 
+    /**
+     * 签退
+     * @param id
+     * @return
+     */
     @PutMapping
     public Result<Attendance> clockOut(@RequestParam Long id) {
         return Result.of(ResultStatus.SUCCESS, attendanceService.update(id));

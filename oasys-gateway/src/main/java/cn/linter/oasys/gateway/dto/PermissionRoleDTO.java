@@ -7,7 +7,6 @@ import java.util.List;
 
 /**
  * 权限和角色映射数据传输对象
- *
  * @author ChrisMo
  * @since 2023/1/21
  */

@@ -11,11 +11,11 @@ import org.springframework.web.bind.annotation.RequestHeader;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
  * 用户控制器
- *
  * @author ChrisMo
  * @since 2023/1/21
  */
@@ -23,10 +23,8 @@ import java.util.List;
 @RequestMapping("oauth")
 public class UserController {
 
-    @Autowired
+    @Resource
     private UserClient userClient;
-
-
 
     /**
      * 获取用户信息

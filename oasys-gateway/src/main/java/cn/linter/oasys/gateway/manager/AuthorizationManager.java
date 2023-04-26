@@ -21,6 +21,7 @@ import org.springframework.util.PathMatcher;
 import org.springframework.web.reactive.function.client.WebClient;
 import reactor.core.publisher.Mono;
 
+import javax.annotation.Resource;
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
@@ -29,7 +30,6 @@ import java.util.concurrent.ExecutionException;
 
 /**
  * 认证管理器
- *
  * @author Chris
  * @since 2023/01/20
  */
@@ -37,16 +37,16 @@ import java.util.concurrent.ExecutionException;
 @Component
 public class AuthorizationManager implements ReactiveAuthorizationManager<AuthorizationContext> {
 
-    private final WebClient.Builder webClientBuilder;
-    private final PathMatcher pathMatcher = new AntPathMatcher();
-    private final StringRedisTemplate stringRedisTemplate;
-    private final ObjectMapper objectMapper;
+    @Resource
+    private WebClient.Builder webClientBuilder;
 
-    public AuthorizationManager(WebClient.Builder webClientBuilder, StringRedisTemplate stringRedisTemplate, ObjectMapper objectMapper) {
-        this.webClientBuilder = webClientBuilder;
-        this.stringRedisTemplate = stringRedisTemplate;
-        this.objectMapper = objectMapper;
-    }
+    @Resource
+    private StringRedisTemplate stringRedisTemplate;
+
+    @Resource
+    private ObjectMapper objectMapper;
+
+    private final PathMatcher pathMatcher = new AntPathMatcher();
 
     @Override
     public Mono<AuthorizationDecision> check(Mono<Authentication> mono, AuthorizationContext authorizationContext) {

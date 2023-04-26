@@ -8,7 +8,6 @@ import org.springframework.cloud.openfeign.EnableFeignClients;
 
 /**
  * 认证服务启动类
- *
  * @author ChrisMo
  * @since 2022/11/01
  */

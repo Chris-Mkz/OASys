@@ -8,7 +8,6 @@ import java.util.List;
 
 /**
  * 分页数据实体类
- *
  * @author ChrisMo
  * @date 2022/12/19
  */

@@ -9,19 +9,19 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
+import javax.annotation.Resource;
 import java.util.List;
 
 /**
  * 权限控制器
- *
- * @author wangxiaoyang
- * @since 2021/01/14
+ * @author Chris
+ * @since 2023/01/14
  */
 @RestController
 @RequestMapping("permissions")
 public class PermissionController {
 
-    @Autowired
+    @Resource
     private PermissionService permissionService;
 
 
