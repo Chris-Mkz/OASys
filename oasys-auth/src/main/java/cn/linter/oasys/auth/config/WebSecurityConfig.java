@@ -34,6 +34,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     @Resource
     private UserClient userClient;
 
+    //密码编码器
     @Bean
     public PasswordEncoder passwordEncoderFactory() {
         return new BCryptPasswordEncoder();
@@ -44,6 +45,7 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
         return super.authenticationManagerBean();
     }
 
+    //安全连接机制
     @Bean
     public UserDetailsService userDetailsServiceFactory() {
         return username -> {
